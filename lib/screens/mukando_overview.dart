@@ -44,7 +44,7 @@ class _MukandoOverviewScreenState extends State<MukandoOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MyShop'),
+        title: const Text('Pfumamugaba'),
       ),
       drawer: const AppDrawer(),
       body: _isLoading

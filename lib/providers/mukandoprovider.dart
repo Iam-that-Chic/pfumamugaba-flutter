@@ -59,7 +59,7 @@ class MukandoProvider with ChangeNotifier {
 
   Future<void> addProduct(Mukando product) async {
     final url =
-       Uri.parse( 'https://127.0.0.1:8001');
+       Uri.parse( 'https://10.0.0.1:8001');
     try {
       final response = await http.post(
         url,

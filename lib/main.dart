@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pfumamugaba/models/mukandomodel.dart';
 import 'package:pfumamugaba/providers/mukandoprovider.dart';
 import 'package:provider/provider.dart';
 
@@ -18,14 +19,20 @@ class MyApp extends StatelessWidget {
           value: Auth(),
         ),
        
-       
+       ChangeNotifierProvider.value(
+          value: MukandoProvider(
+             "authToken",
+               "1",
+               [] ,
+          ),
+        ),
         
       ],
       child: Consumer<Auth>(
         builder: (ctx, auth, _) => MaterialApp(
               title: 'Pfumamugaba',
               theme: ThemeData(
-                primarySwatch: Colors.purple,
+                primarySwatch: Colors.orange,
                 accentColor: Colors.deepOrange,
                 fontFamily: 'Lato',
               ),

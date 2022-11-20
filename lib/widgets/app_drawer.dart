@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pfumamugaba/screens/my_mukando.dart';
+import 'package:pfumamugaba/screens/my_payments.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/authprovider.dart';
@@ -18,23 +20,29 @@ class AppDrawer extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Icon(Icons.shop),
-            title:const Text('Shop'),
+            title:const Text('My Mukando'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed('/');
+               Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MyMukando()),
+            );
             },
           ),
          const Divider(),
           ListTile(
             leading:const Icon(Icons.payment),
-            title:const Text('Orders'),
+            title:const Text('My Payments'),
             onTap: () {
-             
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MyPayments()),
+            );
             },
           ),
          const Divider(),
           ListTile(
-            leading:const Icon(Icons.edit),
-            title:const Text('Manage Products'),
+            leading:const Icon(Icons.star),
+            title:const Text('Loyalty Points'),
             onTap: () {
               
             },

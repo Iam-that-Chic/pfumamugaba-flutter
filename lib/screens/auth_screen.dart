@@ -87,7 +87,7 @@ class AuthCard extends StatefulWidget {
 class _AuthCardState extends State<AuthCard> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   AuthMode _authMode = AuthMode.Login;
-  Map<String, String> _authData = {
+  final Map<String, String> _authData = {
     'email': '',
     'password': '',
   };
@@ -125,10 +125,10 @@ class _AuthCardState extends State<AuthCard> {
       if (_authMode == AuthMode.Login) {
         // Log user in
         await Provider.of<Auth>(context, listen: false).login(
-          "pamelamuzoma@gmail.com",
-          "pressure"
-        //  _authData['email'],
-         // _authData['password'],
+        "pamelamuzoma@gmail.com",
+          "pressure",
+     //  _authData['email'],
+       // _authData['password'],
         );
       } else {
         // Sign user up
@@ -138,7 +138,7 @@ class _AuthCardState extends State<AuthCard> {
           "pamela"
        //   _authData['email'],
          // _authData['password'],
-        );
+        );*/
       }
     } on HttpException catch (error) {
       var errorMessage = 'Authentication failed';
